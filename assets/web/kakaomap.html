@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>카카오맵</title>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=eb0079094f72157eed1771f7261a0e2a"></script>
+    <style>
+        .ellipsis {
+            font-size: 70px; /* 폰트 크기 */
+            font-weight: bold; /* 볼드체 */
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+<div id="map" style="width:100%;height:100vh;"></div>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(37.26911, 127.1350),
+        level: 5
+    };
+
+    var map = new kakao.maps.Map(container, options);
+
+    var imageSrc = 'https://private-user-images.githubusercontent.com/81556800/357316707-63cfc81c-3cb4-43de-87e1-2177ecc4cce5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjM1Njc0NjAsIm5iZiI6MTcyMzU2NzE2MCwicGF0aCI6Ii84MTU1NjgwMC8zNTczMTY3MDctNjNjZmM4MWMtM2NiNC00M2RlLTg3ZTEtMjE3N2VjYzRjY2U1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODEzVDE2MzkyMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRhNTc5NTlhZTYwOTA5ODYwM2Q5NjUyMjIxOTU4NGMwOTJlNjhkZGRmNTU4NjVjMDM1ZDMyMDFlMmQ0MDNlMDQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.C5aaWmfSF4zbDvuQKJlFzcOaQjhkEDjchlezrVhTVH0';
+    var imageSize = new kakao.maps.Size(120, 180);
+    var imageOption = { offset: new kakao.maps.Point(27, 69) };
+
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+
+    // 마커 개별 선언
+    var marker1 = new kakao.maps.Marker({
+        map: map,
+        position: new kakao.maps.LatLng(37.27104, 127.1514),
+        title: 'marker1',
+        image: markerImage
+    });
+
+    var marker2 = new kakao.maps.Marker({
+        map: map,
+        position: new kakao.maps.LatLng(37.26918, 127.1147),
+        title: 'marker2',
+        image: markerImage
+    });
+
+    var marker3 = new kakao.maps.Marker({
+        map: map,
+        position: new kakao.maps.LatLng(37.25917, 127.1222),
+        title: 'marker3',
+        image: markerImage
+    });
+
+    var markerPosition1 = new kakao.maps.LatLng(37.27103, 127.1359);
+    var markerPosition2 = new kakao.maps.LatLng(37.27381, 127.1359);
+
+    var additionalMarker1 = new kakao.maps.Marker({
+        position: markerPosition1,
+        map: map,
+        clickable: true
+    });
+
+    var iwContent = '<div style="padding:23px; font-size:23px;font-weight: bold;">용인시박물관</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        iwPosition = new kakao.maps.LatLng(37.26432, 127.1528);
+
+    var infowindow = new kakao.maps.InfoWindow({
+        position : iwPosition,
+        map: map,
+        content : iwContent
+    });
+
+    var iwContent2 = '<div style="padding:20px; font-size:24px;font-weight: bold;">용인 백남준아트센터</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        iwPosition2 = new kakao.maps.LatLng(37.26253, 127.1183);
+
+    var infowindow2 = new kakao.maps.InfoWindow({
+        position : iwPosition2,
+        map: map,
+        content : iwContent2
+    });
+
+
+    var iwContent3 = '<div style="padding:18px; font-size:26px; font-weight: bold; width:80px;">민속촌</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        iwPosition3 = new kakao.maps.LatLng(37.25211, 127.1237);
+
+    var infowindow3 = new kakao.maps.InfoWindow({
+        position : iwPosition3,
+        map: map,
+        content : iwContent3
+    });
+
+    var content = '<div class="wrap">' +
+        '    <div class="info">' +
+        '        <div class="body">' +
+        '            <div class="desc">' +
+        '                <div class="ellipsis">▼</div>' +
+        '            </div>' +
+        '        </div>' +
+        '    </div>' +
+        '</div>';
+
+    var overlay = new kakao.maps.CustomOverlay({
+        content: content,
+        map: map,
+        position: markerPosition2
+    });
+
+    // 마커 클릭 이벤트
+    kakao.maps.event.addListener(marker3, 'click', function() {
+    // 새로운 이미지 크기 설정
+    var enlargedSize = new kakao.maps.Size(180, 270); // 원하는 크기로 조정
+    var enlargedImageOption = { offset: new kakao.maps.Point(70, 140) }; // 이미지 위치 조정
+    var enlargedMarkerImage = new kakao.maps.MarkerImage(imageSrc, enlargedSize, enlargedImageOption);
+
+    // 마커 이미지 변경 바로 실행
+    marker3.setImage(enlargedMarkerImage);
+
+    // Flutter InAppWebView 핸들러 호출은 2초 후 실행
+    setTimeout(function() {
+        window.flutter_inappwebview.callHandler('myFlutterApp', 'showModal', 'marker1');
+    }, 1000); // 2초 후에 함수 실행
+});
+</script>
+</body>
+</html>
+
