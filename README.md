@@ -42,7 +42,7 @@
 - **상세페이지**:
   - 특정 관광지에 대한 세부 정보 제공.
  
-# 4. AI챗봇(GPT4oMini)
+# 4. AI챗봇(GPT-4o mini)
 <img width="500" alt="스크린샷 2024-08-14 오전 8 42 07" src="https://github.com/user-attachments/assets/4cda3b68-43c8-4d00-8a6d-6d8c8756c3d1">
 <br/>
 <br/>
