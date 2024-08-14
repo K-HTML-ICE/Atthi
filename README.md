@@ -52,7 +52,6 @@
 * 용인시 열린관광과 용인관광 웹페이지를 selenium을 통해 크롤링하여 관광명소와 관련 정보 수집
 * 수집한 데이터프레임에서 관광지명, 주소, 특징 등의 컬럼을 문자열로 변환하고, 이들 컬럼을 결합하여 feature라는 새로운 컬럼을 제작
 * 이 feature 컬럼을 기반으로, 각 관광지에 대한 임베딩을 생성하여 hf_embeddings 컬럼에 저장
-
 ![KakaoTalk_Photo_2024-08-14-09-39-35](https://github.com/user-attachments/assets/1d32ecbd-aee5-432a-87d3-b4477df83dbb)
 
 2. 임베딩 기반 검색 기능
