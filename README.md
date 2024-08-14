@@ -64,7 +64,8 @@
 3. ChatGPT 기반 대화 모델 설정
 * msg_prompt라는 사전(dictionary)에 다양한 사용자 의도(intent)에 따른 시스템 메시지와 사용자 메시지의 템플릿을 정의함. 
 * 예를 들어, '추천', '설명', '검색'이라는 의도에 따라 각각 다른 메시지 템플릿을 사용할 수 있도록 설정
-￼![KakaoTalk_Photo_2024-08-14-09-40-45](https://github.com/user-attachments/assets/8368135f-375f-47f8-9458-6b231c9d1d73)
+![KakaoTalk_Photo_2024-08-14-09-43-36](https://github.com/user-attachments/assets/895c3a65-2503-429e-8086-0ba38fa5a3c5)
+
 
 4. 사용자 상호작용 처리 함수 (user_interact)
 * 사용자의 쿼리를 분석하여 의도를 파악
