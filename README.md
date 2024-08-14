@@ -42,7 +42,7 @@
 - **상세페이지**:
   - 특정 관광지에 대한 세부 정보 제공.
  
-# 4. 기술적 프로세스
+# 4-1. 기술적 프로세스
 - AI 챗봇 (GPT4oMINI)
 <img width="500" alt="스크린샷 2024-08-14 오전 8 42 07" src="https://github.com/user-attachments/assets/4cda3b68-43c8-4d00-8a6d-6d8c8756c3d1">
 <br/>
@@ -58,7 +58,6 @@
 2. 임베딩 기반 검색 기능
 * 사용자가 입력한 쿼리(예: "휠체어 대여가 되는 관광지를 알고싶어")에 대해 임베딩을 생성
 * 이 쿼리 임베딩과 hf_embeddings에 저장된 관광지 임베딩 간의 코사인 유사도를 계산하여, 가장 유사한 관광지들을 top_k 개수만큼 찾음(임의로 top_k=3으로 지정)
-* ￼
 ![KakaoTalk_Photo_2024-08-14-09-40-45](https://github.com/user-attachments/assets/e3a6d3f3-a503-437a-a7b0-e755082b8fe7)
 
 
@@ -82,8 +81,13 @@
 6. ChatGPT 메시지 생성
 ![KakaoTalk_Photo_2024-08-14-09-41-35](https://github.com/user-attachments/assets/3cce61e2-7af9-4ce5-afb2-f3f09435c304)
 
-# 4-1. 데이터 수집 및 전처리
-1. 모델 로딩 및 데이터 준비 * 용인시 열린관광과 용인관광 웹페이지를 selenium을 통해 크롤링하여 관광명소와 관련 정보 수집 * 수집한 데이터프레임에서 관광지명, 주소, 특징 등의 컬럼을 문자열로 변환하고, 이들 컬럼을 결합하여 feature라는 새로운 컬럼을 제작 * 이 feature 컬럼을 기반으로, 각 관광지에 대한 임베딩을 생성하여 hf_embeddings 컬럼에 저장]
+# 4-2. GPT-4o-mini Fine-tuning
+- 4-1에서 수집한 데이터를 토대로 jsonl형식으로 변환 후, fine-tuning 진행
+- Trained tokens: 16,449
+- Epochs: 3
+- Batch size: 1
+- LR multiplier: 1.8
+- Seed: 1024073020
 <br/>
 
 - 카카오맵 API
