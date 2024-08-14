@@ -47,10 +47,39 @@
 <br/>
 <br/>
 - 데이터 수집 및 전처리
-<img width="878" alt="스크린샷 2024-08-14 오전 8 47 29" src="https://github.com/user-attachments/assets/0803ea4e-4172-462e-86a5-9177daca4455">
-<img width="605" alt="스크린샷 2024-08-14 오전 8 47 13" src="https://github.com/user-attachments/assets/0a020720-cea4-4d1c-864e-83ee24d4123c">
-<img width="941" alt="스크린샷 2024-08-14 오전 5 25 14" src="https://github.com/user-attachments/assets/c5bcd778-5749-4ad5-92e8-f17e1f510845">
-<br/>
+1. 모델 로딩 및 데이터 준비
+* 용인시 열린관광과 용인관광 웹페이지를 selenium을 통해 크롤링하여 관광명소와 관련 정보 수집
+* 수집한 데이터프레임에서 관광지명, 주소, 특징 등의 컬럼을 문자열로 변환하고, 이들 컬럼을 결합하여 feature라는 새로운 컬럼을 제작
+* 이 feature 컬럼을 기반으로, 각 관광지에 대한 임베딩을 생성하여 hf_embeddings 컬럼에 저장
+
+![KakaoTalk_Photo_2024-08-14-09-39-35](https://github.com/user-attachments/assets/1d32ecbd-aee5-432a-87d3-b4477df83dbb)
+
+2. 임베딩 기반 검색 기능
+* 사용자가 입력한 쿼리(예: "휠체어 대여가 되는 관광지를 알고싶어")에 대해 임베딩을 생성
+* 이 쿼리 임베딩과 hf_embeddings에 저장된 관광지 임베딩 간의 코사인 유사도를 계산하여, 가장 유사한 관광지들을 top_k 개수만큼 찾음(임의로 top_k=3으로 지정)
+* ￼
+![KakaoTalk_Photo_2024-08-14-09-40-45](https://github.com/user-attachments/assets/e3a6d3f3-a503-437a-a7b0-e755082b8fe7)
+
+
+3. ChatGPT 기반 대화 모델 설정
+* msg_prompt라는 사전(dictionary)에 다양한 사용자 의도(intent)에 따른 시스템 메시지와 사용자 메시지의 템플릿을 정의함. 
+* 예를 들어, '추천', '설명', '검색'이라는 의도에 따라 각각 다른 메시지 템플릿을 사용할 수 있도록 설정
+￼![KakaoTalk_Photo_2024-08-14-09-40-45](https://github.com/user-attachments/assets/8368135f-375f-47f8-9458-6b231c9d1d73)
+
+4. 사용자 상호작용 처리 함수 (user_interact)
+* 사용자의 쿼리를 분석하여 의도를 파악
+* 이를 위해 ChatGPT API를 사용하여, 사용자의 입력을 분석하고 intent를 식별함
+* 식별된 intent에 따라 적절한 msg_prompt를 선택하고, 최종적으로 사용자에게 반환할 메시지를 생성함
+* 만약 사용자의 쿼리가 관광지 추천이나 검색에 해당하면, 유사도가 높은 관광지 정보를 제공하고, 그 정보에 대해 상세 설명을 하거나 적절한 추천 메시지를 생성하여 사용자에게 반환함
+* 생성된 메시지들은 jsonl로 제작하여 추후, 관광 맞춤 챗봇을 개발하기 위한 파인튜닝 데이터셋으로 활용함
+
+5. 사용자의 의도에 따른 작업 수행
+* 추천 또는 검색: 사용자의 질문에 대해 가장 유사한 관광지 정보를 추출하고, 해당 정보를 사용자에게 제공하는 메시지를 생성
+* 설명: 특정 관광지에 대한 설명이 요청된 경우, 이미 계산된 유사도를 기반으로 해당 관광지의 상세 정보를 제공
+
+6. ChatGPT 메시지 생성
+![KakaoTalk_Photo_2024-08-14-09-41-35](https://github.com/user-attachments/assets/3cce61e2-7af9-4ce5-afb2-f3f09435c304)
+
 <br/>
 
 - 카카오맵 API
