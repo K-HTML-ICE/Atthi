@@ -82,6 +82,7 @@
 ![KakaoTalk_Photo_2024-08-14-09-41-35](https://github.com/user-attachments/assets/3cce61e2-7af9-4ce5-afb2-f3f09435c304)
 
 # 4-2. GPT-4o-mini Fine-tuning
+![KakaoTalk_Photo_2024-08-14-10-10-49](https://github.com/user-attachments/assets/d3822b84-5dee-4f70-ae17-8e2014028b3d)
 - 4-1에서 수집한 데이터를 토대로 jsonl형식으로 변환 후, fine-tuning 진행
 - Trained tokens: 16,449
 - Epochs: 3
