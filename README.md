@@ -89,6 +89,7 @@
 - LR multiplier: 1.8
 - Seed: 1024073020
 <br/>
+![KakaoTalk_Photo_2024-08-14-10-20-07](https://github.com/user-attachments/assets/5a49a3ad-665c-4c32-a1b8-2bb5fd8b0194)
 
 # 5. 카카오맵 API 연동
   - 사용자 위치 기반 시스템
