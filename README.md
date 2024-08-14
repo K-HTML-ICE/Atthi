@@ -1,6 +1,7 @@
 <a href="https://club-project-one.vercel.app/" target="_blank">
-<img width="325" alt="스크린샷 2024-08-14 오전 7 48 26" src="https://github.com/user-attachments/assets/7937b261-6b66-4a20-9826-7e213180e971">
+<img width="700" alt="스크린샷 2024-08-14 오전 7 48 26" src="https://github.com/user-attachments/assets/8e9a7409-656b-4cb8-a726-e25424fbe630">
 </a>
+
 
 <br/>
 <br/>
@@ -27,7 +28,7 @@
 <br/>
 
 # 3. 주요 기능
-<img width="1143" alt="스크린샷 2024-08-14 오전 8 18 23" src="https://github.com/user-attachments/assets/bc95b1e1-4af9-4d28-9411-92c5128a75a3">
+<img width="700" alt="스크린샷 2024-08-14 오전 8 18 23" src="https://github.com/user-attachments/assets/bc95b1e1-4af9-4d28-9411-92c5128a75a3">
 
 - **설문조사**:
   - 맞춤화를 위한 서비스 선택.
@@ -43,7 +44,7 @@
  
 # 4. 기술적 프로세스
 - AI 챗봇 (GPT4oMINI)
-<img width="663" alt="스크린샷 2024-08-14 오전 8 42 07" src="https://github.com/user-attachments/assets/4cda3b68-43c8-4d00-8a6d-6d8c8756c3d1">
+<img width="500" alt="스크린샷 2024-08-14 오전 8 42 07" src="https://github.com/user-attachments/assets/4cda3b68-43c8-4d00-8a6d-6d8c8756c3d1">
 <br/>
 <br/>
 - 데이터 수집 및 전처리
