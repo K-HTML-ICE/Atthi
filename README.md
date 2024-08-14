@@ -46,6 +46,7 @@
 <img width="500" alt="스크린샷 2024-08-14 오전 8 42 07" src="https://github.com/user-attachments/assets/4cda3b68-43c8-4d00-8a6d-6d8c8756c3d1">
 <br/>
 <br/>
+
 # 4-1. 데이터 수집 및 전처리
 1. 모델 로딩 및 데이터 준비
 * 용인시 열린관광과 용인관광 웹페이지를 selenium을 통해 크롤링하여 관광명소와 관련 정보 수집
