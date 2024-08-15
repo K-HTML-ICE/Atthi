@@ -17,7 +17,7 @@
 <br/>
 
 # 2. 팀 소개
-| 도성현 | 이윤빈 | 박준서 | 오에린 |
+| 도성현 | 이바체슬라브(이윤빈) | 박준서 | 오에린 |
 |:------:|:------:|:------:|:------:|
 | <img src="https://avatars.githubusercontent.com/u/52828205?v=4" alt="이동규" width="150"> | <img src="https://avatars.githubusercontent.com/u/81556800?v=4" alt="이바체슬라브" width="150"> | <img src="https://avatars.githubusercontent.com/u/81576126?v=4" alt="박준서" width="150"> | <img src="https://avatars.githubusercontent.com/u/62730155?v=4" alt="오에린" width="150"> |
 | 백/프론트 개발 | 백/프론트 개발 | 기획/디자인 | AI모델 학습/데이터 수집 및 전처리 |
@@ -88,8 +88,9 @@
 - Batch size: 1
 - LR multiplier: 1.8
 - Seed: 1024073020
+<img width="500" alt="스크린샷 2024-08-15 오후 12 40 33" src="https://github.com/user-attachments/assets/f83c6f44-509b-4842-831a-143f419e88fd">
+
 <br/>
-![KakaoTalk_Photo_2024-08-14-10-20-07](https://github.com/user-attachments/assets/5a49a3ad-665c-4c32-a1b8-2bb5fd8b0194)
 
 # 5. 카카오맵 API 연동
   - 사용자 위치 기반 시스템
