@@ -17,7 +17,7 @@
 <br/>
 
 # 2. 팀 소개
-| 도성현 | 이바체슬라브 | 박준서 | 오에린 |
+| 도성현 | 이윤빈 | 박준서 | 오에린 |
 |:------:|:------:|:------:|:------:|
 | <img src="https://avatars.githubusercontent.com/u/52828205?v=4" alt="이동규" width="150"> | <img src="https://avatars.githubusercontent.com/u/81556800?v=4" alt="이바체슬라브" width="150"> | <img src="https://avatars.githubusercontent.com/u/81576126?v=4" alt="박준서" width="150"> | <img src="https://avatars.githubusercontent.com/u/62730155?v=4" alt="오에린" width="150"> |
 | 백/프론트 개발 | 백/프론트 개발 | 기획/디자인 | AI모델 학습/데이터 수집 및 전처리 |
