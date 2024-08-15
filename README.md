@@ -1,10 +1,6 @@
 <a href="https://club-project-one.vercel.app/" target="_blank">
-<img width="700" alt="스크린샷 2024-08-14 오전 7 48 26" src="https://github.com/user-attachments/assets/8e9a7409-656b-4cb8-a726-e25424fbe630">
+<img width="700" alt="스크린샷 2024-08-14 오전 7 48 26" src="https://github.com/user-attachments/assets/af31b6d0-0e76-4977-b7a3-07c30567b97d">
 </a>
-
-
-<br/>
-<br/>
 
 <br/>
 <br/>
